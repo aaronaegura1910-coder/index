@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <body>
+            
+<h1>PREGUNTAS & RESPUESTAS</h1>
+<H3>¿qué tipo de preguntas solicitarias para nosotros?</H3>
+<h1>¿Que tipo de producctos venden?</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista seleccionable con texto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #0f0b38;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Selecciona una opción:</h2>
+
+  <!-- Lista desplegable -->
+  <select id="miLista" onchange="mostrarTexto()">
+    <option value="">-- Selecciona una opción --</option>
+    <option value="texto1">"¿Que tipos de productos venden?"</option>
+    <option value="texto2">"¿Los productos son de envio seguro?"</option>
+    <option value="texto3">"¿Puedo devolver un produccto si no es lo que queria/lo que pedi?"</option>
+  </select>
+
+  <!-- Aquí aparecerá el texto -->
+  <div id="resultado"></div>
+
+  <script>
+    function mostrarTexto() {
+      // Obtenemos el valor seleccionado
+      const valor = document.getElementById("miLista").value;
+      const resultado = document.getElementById("resultado");
+
+      // Dependiendo de la opción, mostramos un texto
+      if (valor === "texto1") {
+        resultado.textContent = "Los producctos que vendemos son todos originales de la compañia SEGA ©, vendemos los productos con su derecho y autoridad, todo producto que usted deese comprar viene en parte de esta querida compañia, ya sean juegos, ropa, jugetes, todo lo que compre tendrá 100% su legalidad, si tiene alguna duda nos puede consultar personalmete. ."; 
+      } else if (valor === "texto2") {
+        resultado.textContent = "Si, todo producto es enviado con la más limpia y grande seguridad, su producto no se dañará o se extraviará, en caso de que tenga un caso asi, solicite una devolución o un reembolso, usted como cliente nos importa al igual que su confianza en nosotros, puede comunicarse con el número principal de la empresa.";
+      } else if (valor === "texto3") {
+        resultado.textContent = "Claro!, cualquier producto que no sea lo que deseó o lo que usted pidió, será solicitado para un cambio o reembolso, si el producto no llega a su casa y/o domicilio solicitado, igual puede pedir un reenvio o devolución, solo debe escribirnos su domicilio o ingresar una ya guardada. .";
+      } else {
+        resultado.textContent = ""; // Si no hay selección
+      }
+    }
+  </script>
+  <img src="SEGA.png" width="800" height="500">
+  <img src="QR.png" width="200" height="200">
+  <form action="sosi.HTML">
+  <button style="color: rgb(0, 0, 0);"><h1>Click aqui para volver.</h1></button>
+</form>
+            
+        </body>
+    </head>
+</html>
